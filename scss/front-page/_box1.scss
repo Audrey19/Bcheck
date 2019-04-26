@@ -1,0 +1,62 @@
+.frontpage-container-1{
+  width:100vw;
+  background-color: $green;
+  height: 100vh;
+  position: relative;
+  .frontpage-container-box{
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    img{
+    width: 80%
+    }
+    .frontpage-container-box-mission{
+    width: 40%;
+    position: absolute;
+    bottom: 220px;
+    right: 150px;
+    h1{
+        color:$white;
+        font-size: 45px;	
+        font-weight: 500;	
+        line-height: 35px;
+        font-family: $font-menu;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+
+    }
+    p{
+        font-family: $font-p;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 35px;
+        color:$white;
+    }
+    }
+    $margin-video: 4em;
+    .container_video{
+      position: relative;
+      margin-top: 40px;
+      margin-left:  $margin-video;
+       display: block;
+       padding: 20px;
+       width: 150px;
+       border-radius: 0 30px 0 0;
+       background-color:$black;
+       color:$white;
+       text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+      &:before{
+        position: absolute;
+        overflow: hidden;
+        height: 58px;	
+        top:0;
+        left:-70px;
+        background-color: $white;
+        content:url(./assets/images/play_button.svg);
+        }
+    }
+  }
+
+}

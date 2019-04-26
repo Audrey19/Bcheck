@@ -1,0 +1,38 @@
+.frontpage-container-4{
+    width:100vw;
+    position: relative;
+    .frontpage-container-box4{
+        width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 160px 0;
+        .frontpage-container-box4-items{
+            width: 20%;
+            .img{
+                display: block;
+                margin: auto;
+            }
+            .sec{
+                margin-top: 32px;
+            }
+            p{
+                color:$grey;
+                font-family: $font-menu;
+                font-size: 28px;
+                line-height: 28px;
+                text-align: center;
+                margin-top: 60px;
+            }
+            h1{
+                color:$light-green;
+                font-size: 53px;
+                font-weight: bold;
+                line-height: 35px;
+                text-align: center;
+            }
+        }
+    }
+    
+}

@@ -14,10 +14,11 @@ const sass = require("gulp-sass");
 // BrowserSync
 function browserSync(done) {
     browsersync.init({
-        proxy: "localhost/bcheck" //url of site
+        proxy: "http://localhost:81/bcheck" //url of site      
     });
     done();
 }
+
 
 // BrowserSync Reload
 function browserSyncReload(done) {

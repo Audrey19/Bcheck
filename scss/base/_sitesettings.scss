@@ -1,1 +1,29 @@
 //SITE SETTINGS 
+$break-small: 768px;
+$break-medium: 1025px;
+
+$white:#FFFFFF;
+$green:#54ae4a;
+$black:  #1E1E1E;
+$light-green: #75B845;
+$grey: #717171;
+$very-light-green: #EFFFE3;
+
+$font-menu: 'Lato', sans-serif;
+$font-p:'Nunito', sans-serif;
+
+
+
+@mixin responsive($media) {
+    @if $media == tablet {
+      @media only screen and (min-width: $break-small) { @content; }
+    }
+    @else if $media == tablet-landscape {
+      @media only screen and (min-width: $break-small) and (orientation: landscape) { @content; }
+    }
+    @else if $media == laptop {
+      @media only screen and (min-width: $break-medium) { @content; }
+    }
+  }
+
+  /*@include responsive(tablet) { } */

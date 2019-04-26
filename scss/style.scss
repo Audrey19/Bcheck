@@ -6,8 +6,6 @@
 
 @import "base/init";
 
-/* Tools */
-@import "tools/mixins";
 
 /* Site settings */
 @import "base/reset";
@@ -17,8 +15,27 @@
 /* Modules */
 @import "modules/buttons";
 
-/* Layout */
-@import "layouts/header";
+/* front-page */
+@import "front-page/box1";
+@import "front-page/box2";
+@import "front-page/box3";
+@import "front-page/box4";
+
+/* about us */
+@import "aboutUs/about";
+
+/* contact */
+@import "contact/contact";
+
+/* FAQ */
+@import "faq/faq";
 
 /* Vendor */
 @import "vendors/outdatedbrowser";
+
+/* navigation menu */
+@import "header/navigation";
+@import "header/burger";
+
+/* footer */
+@import "footer/footer";

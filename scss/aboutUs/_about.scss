@@ -1,0 +1,108 @@
+.container_about_one{
+    width: 100vw;
+    .about_text{
+        width: 80%;
+        margin: 60px auto;
+        @include responsive(tablet){
+        width: 50%;
+        margin-top: 300px;
+        margin-left: 200px;
+        margin: 150px auto;
+        }
+        h1{
+            color:$light-green;
+            font-family: $font-menu;
+            font-size: 45px;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: center;
+            @include responsive(tablet){
+              font-size: 45px;
+            letter-spacing: 3px;
+            line-height: 100px;
+            text-align: left;
+                 }
+        }
+        p{
+                color: $black;
+                font-size: 26px;
+                font-weight: 500;
+                line-height: 43px;
+                span{
+                    font-weight: bold;
+                }
+        }
+     
+    }
+    .about_img{
+        margin: 0;
+        @include responsive(tablet){
+            margin: 120px 0;
+            }
+        img{
+            width: 100%;
+            border-radius:  0 120px 0 0;
+            @include responsive(tablet){
+                width: 80%;
+             
+                }
+        }
+        
+    }
+}
+
+.container_about_two{
+    width: 100%;
+    position: relative;
+    background-color: $very-light-green;
+    padding: 50px 0;
+    .about_quote{
+        width: 70%;
+        margin: auto;
+        @include responsive(tablet){
+            width: 50%;
+           padding: 150px;
+            }
+        p{
+            text-align: center;
+            font-size: 25px;	
+            font-style: italic;		
+            text-align: center;
+            @include responsive(tablet){
+                font-size: 38px;
+                line-height: 53px;
+                 }
+        }
+    }
+  
+  
+    .about_quote{
+        position: relative;
+        text-align: center;
+        .center-p{
+            @include responsive(tablet){
+            position: absolute;
+            bottom:310px;
+            left:120px;
+            }
+            a{
+                color: black;
+                text-decoration: none;
+               }
+            }
+            .center-n{
+        
+                @include responsive(tablet){
+                    position: absolute;
+                    bottom:310px;
+                    right:120px;
+                    }
+                a{
+                    color: black;
+                    text-decoration: none;
+                   }
+                }
+            
+        }
+        
+    }
