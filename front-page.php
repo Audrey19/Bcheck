@@ -8,23 +8,21 @@ Template Name: front-page
 
 <section class="frontpage-container-1">
     <div class="frontpage-container-box">
-        <img src="<?php bloginfo('template_url'); ?>/assets/images/boiler.jpg" alt="background">
         <div class="frontpage-container-box-mission">
             <h1>We have one mission</h1>
             <p>Because a cold shower should only be a matter of choice, we don't want to let your boiler drive your life anymore!</p>
            <a class="container_video" href="">LAUNCH VIDEO</a>
-            
-           
         </div>
+        <img src="<?php bloginfo('template_url'); ?>/assets/images/boiler.jpg" alt="background">
     </div>
 </section>
 
 <section class="frontpage-container-2">
-    <img src="<?php bloginfo('template_url'); ?>/assets/images/graph.svg" alt="background">
     <div class="frontpage-container-box2">
         <h1 class="box2_title">Something right here.</h1>
         <p class="box2_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris elementum libero nulla, vitae consectetur leo pulvinar at. Maecenas et sodales elit.</p>
     </div>
+    <img src="<?php bloginfo('template_url'); ?>/assets/images/graph.svg" alt="background">
 </section>
 
 <section class="frontpage-container-3">
@@ -36,21 +34,23 @@ Template Name: front-page
     </div>
     <div class="frontpage_container_3_box">
         <div class="box_3_texte">
-            <div class="text_check">
-                <h2>Check integrates with</h2>
-                <ul>
-                    <li>Installers</li>
-                    <li>Smart Home Kits</li> 
-                    <li>Property Manager</li>
-                    <li>Insurers</li>
-                    <li>Social Housing</li>
-                    <li> Utilty Companies</li>
-                    <li>And You!</li>
-                </ul>
+            <div class="box_3_img">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/casing.png" alt="image">
             </div>
-        </div>
-        <div class="box_3_img">
-            <img src="<?php bloginfo('template_url'); ?>/assets/images/casing.png" alt="image">
+                <div class="text_check">
+                    <div class="text_check_item">
+                        <h2>Check integrates with</h2>
+                        <ul>
+                            <li>Installers</li>
+                            <li>Smart Home Kits</li> 
+                            <li>Property Manager</li>
+                            <li>Insurers</li>
+                            <li>Social Housing</li>
+                            <li> Utilty Companies</li>
+                            <li>And You!</li>
+                        </ul>
+                    </div> 
+                </div>
         </div>
     </div>
 </section>
@@ -58,7 +58,7 @@ Template Name: front-page
 <section class="frontpage-container-4">
     <div class="frontpage-container-box4">
         <div class="frontpage-container-box4-items">
-            <img class="img" src="<?php bloginfo('template_url'); ?>/assets/images/breakdown_anticipation.svg" alt="logo">
+            <img class="img one" src="<?php bloginfo('template_url'); ?>/assets/images/breakdown_anticipation.svg" alt="logo">
             <p>Breakdown anticipation</p>
             <h1>48h</h1>
         </div>
@@ -68,7 +68,7 @@ Template Name: front-page
             <h1>450 M</h1>
         </div>
         <div class="frontpage-container-box4-items">
-            <img class="img" src="<?php bloginfo('template_url'); ?>/assets/images/countries_europe.svg" alt="logo">
+            <img class="img three" src="<?php bloginfo('template_url'); ?>/assets/images/countries_europe.svg" alt="logo">
             <p>Countries in Europe</p>
             <h1>3</h1>
         </div>

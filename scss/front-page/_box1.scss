@@ -1,20 +1,26 @@
 .frontpage-container-1{
   width:100vw;
   background-color: $green;
-  height: 100vh;
-  position: relative;
+  @include responsive(tablet){
+    height: 100vh;
+    position: relative;
+       }
   .frontpage-container-box{
     width: 80%;
     margin: auto;
     padding-top: 40px;
-    img{
-    width: 80%
-    }
+
     .frontpage-container-box-mission{
-    width: 40%;
-    position: absolute;
-    bottom: 220px;
-    right: 150px;
+    width: 80%;
+    margin: auto;
+    margin-top:  200px; 
+    @include responsive(tablet){
+      width: 40%;
+      position: absolute;
+      bottom: 220px;
+      right: 150px;
+      margin-top:0;
+         }
     h1{
         color:$white;
         font-size: 45px;	
@@ -23,6 +29,7 @@
         font-family: $font-menu;
         text-transform: uppercase;
         padding-bottom: 10px;
+        line-height: 40px;
 
     }
     p{
@@ -33,6 +40,12 @@
         color:$white;
     }
     }
+    img{
+      width: 100%;
+      @include responsive(tablet){
+        width: 90%;
+           }
+      }
     $margin-video: 4em;
     .container_video{
       position: relative;
@@ -40,21 +53,27 @@
       margin-left:  $margin-video;
        display: block;
        padding: 20px;
-       width: 150px;
+       width: 80px;
        border-radius: 0 30px 0 0;
        background-color:$black;
        color:$white;
        text-decoration: none;
       text-align: center;
       font-weight: bold;
+      @include responsive(tablet){
+        width: 150px;
+           }
       &:before{
         position: absolute;
         overflow: hidden;
-        height: 58px;	
+        height: 75px;	
         top:0;
         left:-70px;
         background-color: $white;
         content:url(./assets/images/play_button.svg);
+        @include responsive(tablet){
+          height: 58px;	
+             }
         }
     }
   }

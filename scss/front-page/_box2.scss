@@ -3,14 +3,23 @@
     width:100vw;
     position: relative;
     img{
+        width:100%;
+        @include responsive(tablet){
         margin-top: 150px;
-        margin-bottom:50px; 
+        margin-bottom:50px;
+        width: 30%;
+               }
     }
     .frontpage-container-box2{
-        position: absolute;
-        top:0;
-        left: 420px;
-        width: 30%;
+        width: 80%;
+        margin: auto;
+        @include responsive(tablet){
+            position: absolute;
+            top:0;
+            left: 420px;
+            width: 30%;
+                   }
+      
         h1{
                 color:$green;
                 font-family: $font-menu;

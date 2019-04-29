@@ -2,17 +2,27 @@
     width:100vw;
     position: relative;
     .box_3_float{
-        position: absolute;
-        width: 45%;
+        width: 100%;
+        margin: auto;
         background-color: $light-green;
-        box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.5), 0 2px 55px 6px rgba(24,83,13,0.25);
-        margin:0 auto;
-        padding: 60px;
-        top:-155px;
-        right:0;
-        .text_works{
-            width: 60%;
+        @include responsive(tablet){
+            position: absolute;
+            width: 45%;
             margin:0 auto;
+            padding: 60px;
+            top:-155px;
+            right:0;
+            box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.5), 0 2px 55px 6px rgba(24,83,13,0.25);
+            }
+        .text_works{
+            width: 80%;
+            margin: auto;
+            padding: 30px 0;
+            @include responsive(tablet){
+                width: 60%;
+                margin:0 auto;
+                padding: 0;
+                }
             h2{
                 text-transform: uppercase;
                 color:$white;	
@@ -20,7 +30,10 @@
                 font-size: 35px;	
                 font-weight: 900;	
                 line-height: 60px;
-                padding-left: 20px;
+                @include responsive(tablet){
+                    padding-left: 20px;
+                    }
+               
             }
             p{
                 color:$white;	
@@ -31,23 +44,41 @@
         }
     } 
     .frontpage_container_3_box{
-        display: flex;
-        flex-direction: row;
+        @include responsive(tablet){
+            display: flex;
+            flex-direction: row;
+            }
+
     }
     .box_3_texte{
-        background-color: $light-green;
-        width: 55%;
+        
+        @include responsive(tablet){
+            width: 55%;
+            background-color: $light-green;
+            }
         .text_check{
-            width: 50%;
-            margin: 140px auto;
+            background-color: $light-green;
+            width: 100%;
+            padding: 30px 0;
+            @include responsive(tablet){
+                width: 50%;
+                margin: 140px auto;
+                padding: 0;
+                }
+            .text_check_item{
+                width: 80%;
+                margin: auto;
+            }
            h2{
                text-transform: uppercase;
                 color:$white;	
                 font-family:$font-menu;	
                 font-size: 27px;	
                 font-weight: 900;	
-                line-height: 60px;
-                padding-left: 20px;
+                line-height: 40px;
+                @include responsive(tablet){
+                    line-height: 60px;
+                    }
            }
            li{
             color:$white;	
@@ -56,17 +87,25 @@
             font-weight: bold;
             line-height: 50px;
            }
+        
         }
     }
     .box_3_img{
-        width: 45%;
-        position: relative;
+        width: 100%;
+        @include responsive(tablet){
+            width:45%;
+            position: relative;
+            }
         img{
-            width:70%;
-            position: absolute;
-            top:130px;
-            right:300px;
-            z-index: 5px;
+            width:100%;
+            @include responsive(tablet){
+                width:70%;
+                position: absolute;
+                top:130px;
+                right:300px;
+                z-index: 5px;
+                }
+           
         }
     }
 }

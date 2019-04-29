@@ -6,14 +6,14 @@
 <section class="footer_container">
 	<div class="<?php if (is_page("contact")){echo "none";} ?>">
 		<div class="pagination_container">
-				<div class="pagination_faq">
+				<a href="http://localhost:81/bcheck<?php if (is_page('about-us')){echo '/';} ?>/faq/"class="pagination_faq">
 					<img class="pagination-logo"src="<?php bloginfo('template_url'); ?>/assets/images/left-arrow.png" alt="fleche">
-					<a href="">FAQ</a>
-				</div>
-				<div class="pagination_contact">
-					<a href="">Contact us</a>
+					<p >FAQ</p>
+				</a>
+				<a href="http://localhost:81/bcheck/contact/" class="pagination_contact">
+					<p>Contact us</p>
 					<img class="pagination-logo"src="<?php bloginfo('template_url'); ?>/assets/images/right_arrow.png" alt="fleche">
-				</div>
+				</a>
 		</div>
 	</div>
 	<div class="footer_container_box">
