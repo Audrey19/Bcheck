@@ -68,7 +68,6 @@ width: 100vw;
         .faq-answer{
             display: none;
             padding: 1em 2em;
-            p{
               margin: 30px auto;
               width:90%;
               line-height: 35px;
@@ -77,13 +76,24 @@ width: 100vw;
                 padding: 0;
                 font-size: 18px;
                 width:700px;
-                }
-              
-            }
+                }  
+            
         }
-        .active-fq {
-            .faq-question{
-                color:$light-green;
+      .active{
+        display: block!important;
+      }
+      
+      .fa-plus, .fa-minus {
+            width: 3%;
+        }
+        .minus {
+            display: none;
+        }
+        
+        
+        .current {
+          .faq-question{
+            color:$light-green;
                 font-size: 26px;
                 font-weight: 900;
                 @include responsive(tablet){
@@ -91,18 +101,7 @@ width: 100vw;
                   font-weight: 900;
                   line-height: 40px;
                   }
-            }
           }
-        .display-content {
-            display: block!important;
-          }
-          .fa-plus, .fa-minus {
-            width: 3%;
-        }
-          .minus {
-            display: none;
-          }
-          .active-arrow {
             .plus{
                 display:none;
             }

@@ -18,15 +18,17 @@ Template Name: FAQ
    <div class="container_faq_box2">
     
    <?php while ( have_rows('boucle') ) : the_row(); ?> 
-             <!-- FIRST --> 
-    <div class="container_faq_box2_items faq" onclick="openFaq(event, 'active')">
-        <h1 class="faq-question"><?php the_sub_field('title'); ?></h1>
-        <img src="<?php bloginfo('template_url'); ?>/assets/images/arrow_down.png" alt="arrow" class="fa-plus plus"> 
-        <img src="<?php bloginfo('template_url'); ?>/assets/images/arrow_up.png" alt="arrow" class="fa-minus minus">  
-    </div>
+        
+    <div class="js-item" >
+        <div class="container_faq_box2_items faq js-arrows" >
+            <h1 class="faq-question"><?php the_sub_field('title'); ?></h1>
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/arrow_down.png" alt="arrow" class="fa-plus plus"> 
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/arrow_up.png" alt="arrow" class="fa-minus minus">  
+        </div>
 
-    <div class="faq-answer active">
-        <p><?php the_sub_field('textarea'); ?></p>
+        <div class="faq-answer">
+            <?php the_sub_field('textarea'); ?>
+        </div>
     </div>
     
     <?php endwhile; ?>
@@ -79,20 +81,29 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 
 <script>
+document.addEventListener('DOMContentLoaded', (event) => {
+var arrows = document.querySelectorAll('.js-arrows');
+    for (i=0; i< arrows.length; i++){
+        arrows[i].onclick = function () {
+                this.parentNode.querySelector('.faq-answer').classList.toggle('active');
+                this.parentNode.querySelector('.js-arrows').classList.toggle('current');
+        }
+    }
+
+});
+</script>
+
+<script>/*
 //Enclosing FUNCTION
 function openFaq(evt, faqSection){
-
   var clickedID = document.getElementsByClassName(faqSection)[0];
   var arrowID = document.getElementsByClassName(faqSection)[0];
-
 clickedID.classList.toggle("display-content");
 evt.currentTarget.classList.toggle("active-fq");
-
 arrowID.classList.toggle("a");
 evt.currentTarget.classList.toggle("active-arrow");
  
 }
-
 </script>
 
 <?php get_footer(); ?>

@@ -871,35 +871,34 @@ body {
           font-size: 30px; } }
     .container_faq .container_faq_box2 .faq-answer {
       display: none;
-      padding: 1em 2em; }
-      .container_faq .container_faq_box2 .faq-answer p {
-        margin: 30px auto;
-        width: 90%;
-        line-height: 35px; }
-        @media only screen and (min-width: 768px) {
-          .container_faq .container_faq_box2 .faq-answer p {
-            margin: 0;
-            padding: 0;
-            font-size: 18px;
-            width: 700px; } }
-    .container_faq .container_faq_box2 .active-fq .faq-question {
-      color: #75B845;
-      font-size: 26px;
-      font-weight: 900; }
+      padding: 1em 2em;
+      margin: 30px auto;
+      width: 90%;
+      line-height: 35px; }
       @media only screen and (min-width: 768px) {
-        .container_faq .container_faq_box2 .active-fq .faq-question {
-          font-size: 46px;
-          font-weight: 900;
-          line-height: 40px; } }
-    .container_faq .container_faq_box2 .display-content {
+        .container_faq .container_faq_box2 .faq-answer {
+          margin: 0;
+          padding: 0;
+          font-size: 18px;
+          width: 700px; } }
+    .container_faq .container_faq_box2 .active {
       display: block !important; }
     .container_faq .container_faq_box2 .fa-plus, .container_faq .container_faq_box2 .fa-minus {
       width: 3%; }
     .container_faq .container_faq_box2 .minus {
       display: none; }
-    .container_faq .container_faq_box2 .active-arrow .plus {
+    .container_faq .container_faq_box2 .current .faq-question {
+      color: #75B845;
+      font-size: 26px;
+      font-weight: 900; }
+      @media only screen and (min-width: 768px) {
+        .container_faq .container_faq_box2 .current .faq-question {
+          font-size: 46px;
+          font-weight: 900;
+          line-height: 40px; } }
+    .container_faq .container_faq_box2 .current .plus {
       display: none; }
-    .container_faq .container_faq_box2 .active-arrow .minus {
+    .container_faq .container_faq_box2 .current .minus {
       display: block; }
     .container_faq .container_faq_box2 .a {
       padding: 0; }
