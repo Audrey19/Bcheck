@@ -5,7 +5,7 @@
         width: 80%;
         margin: auto;
             @include responsive(tablet){
-            width: 60%;
+            width: 70%;
             margin: auto;
             display: flex;
             flex-direction: row;
@@ -15,6 +15,7 @@
         .frontpage-container-box4-items{
             width: 100%;
             margin: 80px 0;
+            text-align: center;
             @include responsive(tablet){
             width:20%;
                 }
@@ -27,16 +28,7 @@
                 }
                
             }
-            .sec{
-                @include responsive(tablet){
-                    margin-top: 11px;
-                }   
-            }
-            .three{
-                @include responsive(tablet){
-                    margin-top: 35px;
-                } 
-            }
+
             p{
                 color:$grey;
                 font-family: $font-menu;

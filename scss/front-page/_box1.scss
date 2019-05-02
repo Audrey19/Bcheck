@@ -42,8 +42,9 @@
     }
     img{
       width: 100%;
+      z-index: 5;
       @include responsive(tablet){
-        width: 90%;
+        width: 70%;
            }
       }
     $margin-video: 4em;

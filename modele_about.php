@@ -7,15 +7,18 @@ Template Name: About us
 <?php get_header(); ?>
 <section class="container_about_one">
     <div class="about_text">
-        <h1>Who is bcheck</h1>
-        <p>We have one mission: you’ll take a cold shower only because you decided to,<span>not because your boiler failed.</span></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris elementum libero nulla, vitae consectetur leo pulvinar at. Maecenas et sodales elit.</p>
+        <h1><?php the_field('first_title'); ?></h1>
+        <p><?php the_field('first_textarea'); ?></p>
     </div>
     <a href="#top" class="about_logo">
         <img src="<?php bloginfo('template_url'); ?>/assets/images/arrow_down_white.png" alt="team">
     </a>
     <div  id="top" class="about_img">
-        <img src="<?php bloginfo('template_url'); ?>/assets/images/photo_team.jpg" alt="team">
+    <?php 
+        $image = get_field('team_image');
+        if($image): ?>
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="team">
+    <?php endif; ?>
     </div>
 
 </section>
@@ -40,15 +43,11 @@ Template Name: About us
         data-cycle-next=".arrow_right"
         data-cycle-slides="> div"
         >
+        <?php while ( have_rows('quotes') ) : the_row(); ?>  
             <div>
-                 <p>" This is indeed the pain points we would like to address as well "</p>
+                 <p><?php the_sub_field('quote'); ?></p>
             </div>
-            <div>
-             <p>" Lorem Ipsum hfjhezf ggez gbjhgzhfd hvzv hhzahzah bs agh"</p>
-            </div>
-            <div>
-                <p>" WordPress developers and administrators. Join them; it only takes a minute: "</p>
-            </div>
+        <?php endwhile; ?>
         </div>
     </div>
        

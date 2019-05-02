@@ -9,13 +9,18 @@ Template Name: Contact
 <section class="container_contact">
     <div class="container_contact_box_left">
         <div class="container_contact_box_content">
-            <h1>Get in Touch</h1>
-            <p>Should you want to discuss how bCheck can help your business. Please reach out. If it is just for a coffee, that’s fine as well. We love coffee and prefer drinking it in good company.</p>
+            <h1><?php the_field('first_title'); ?></h1>
+            <p><?php the_field('first_textarea'); ?></p>
         </div>
     </div>
     <div class="container_contact_box_right">
         <div class="container_contact_box_img">
-            <img src="<?php bloginfo('template_url'); ?>/assets/images/contact.jpg" alt="image-contact">
+        <?php 
+                $image = get_field('image');
+                if($image): ?>
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="background">
+            <?php endif; ?>
+
         </div>
         <div class="container_contact_box_from">
             <div class="buttons">
