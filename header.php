@@ -27,13 +27,14 @@
   </div>
   
   <?php wp_nav_menu(array('menu_id' => 'menu_container','theme_location' => 'primary' )); ?>
+  <?php wp_nav_menu(array('menu_id' => 'menu_container','theme_location' => 'ternary' )); ?>
   <button class="hamburger hamburger--slider" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
         <script>
           var hamburger = document.querySelector(".hamburger");
-          var navigation = document.querySelector(".menu");
+          var navigation = document.querySelector(".menu-menu-responsive-container");
           hamburger.addEventListener("click", function() {
             hamburger.classList.toggle("is-active");
             navigation.classList.toggle("is-active");
@@ -43,8 +44,7 @@
  
 
   <div class="faq_container">
-    <a href="http://localhost:81/bcheck/faq"><p class="faq_container_item">FAQ</p></a>
-    <a href="http://localhost:81/bcheck/faq"><img class="faq" src="<?php bloginfo('template_url'); ?>/assets/images/question.png" alt="intergogation"></a>
+    <a href="http://localhost:81/bcheck/faq">FAQ<img class="faq" src="<?php bloginfo('template_url'); ?>/assets/images/question.png" alt="intergogation"></a>
   </div>
 
 

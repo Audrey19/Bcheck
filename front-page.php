@@ -8,70 +8,72 @@ Template Name: front-page
 
 <section class="frontpage-container-1">
     <div class="frontpage-container-box">
-        <img src="<?php bloginfo('template_url'); ?>/assets/images/boiler.jpg" alt="background">
         <div class="frontpage-container-box-mission">
-            <h1>We have one mission</h1>
-            <p>Because a cold shower should only be a matter of choice, we don't want to let your boiler drive your life anymore!</p>
+            <h1><?php the_field('front_page_title'); ?></h1>
+            <p><?php the_field('front_page_textarea'); ?></p>
            <a class="container_video" href="">LAUNCH VIDEO</a>
-            
-           
         </div>
-    </div>
+            <?php 
+                $image = get_field('background-image');
+                if( !empty($image) ): ?>
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="background">
+            <?php endif; ?>
+        </div>
 </section>
 
 <section class="frontpage-container-2">
-    <img src="<?php bloginfo('template_url'); ?>/assets/images/graph.svg" alt="background">
     <div class="frontpage-container-box2">
-        <h1 class="box2_title">Something right here.</h1>
-        <p class="box2_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris elementum libero nulla, vitae consectetur leo pulvinar at. Maecenas et sodales elit.</p>
+        <h1 class="box2_title"><?php the_field('front_page_second_title'); ?>.</h1>
+        <p class="box2_p"><?php the_field('front_page_second_textarea'); ?></p>
     </div>
+    <?php 
+        $image_two = get_field('second_background_image');
+        if( !empty($image_two) ): ?>
+        <img src="<?php echo $image_two['url']; ?>" alt="<?php echo $image_two['alt']; ?>" alt="background">
+    <?php endif; ?>
 </section>
+<section class="frontpage-container-3bis">
 
-<section class="frontpage-container-3">
     <div class="box_3_float">  
         <div class="text_works">
-            <h2>How bcheck works ?</h2>
-            <p>bCheck is a universal end-to-end solution that allows to monitor, detect and even predict gas boiler breakdowns. A simple plug & play solution, ...Shouldn't mention Fitbit, and not "continuously reading" to avoid people to be afraid</p>
+            <h2><?php the_field('front_page_third_title'); ?></h2>
+           <?php the_field('front_page_third_textarea'); ?>
         </div> 
     </div>
+    </section>
+    <section class="frontpage-container-3">
     <div class="frontpage_container_3_box">
-        <div class="box_3_texte">
-            <div class="text_check">
-                <h2>Check integrates with</h2>
-                <ul>
-                    <li>Installers</li>
-                    <li>Smart Home Kits</li> 
-                    <li>Property Manager</li>
-                    <li>Insurers</li>
-                    <li>Social Housing</li>
-                    <li> Utilty Companies</li>
-                    <li>And You!</li>
-                </ul>
+            
+            <div class="box_3_img">
+            <?php 
+                $image_three = get_field('modules_image');
+                if($image_three): ?>
+                <img src="<?php echo $image_three['url']; ?>" alt="<?php echo $image_three['alt']; ?>" alt="background">
+            <?php endif; ?>    
             </div>
-        </div>
-        <div class="box_3_img">
-            <img src="<?php bloginfo('template_url'); ?>/assets/images/casing.png" alt="image">
-        </div>
+       
+            <div class="text_check">
+                    <div class="text_check_item">
+                        <h2><?php the_field('front_page_check_list_title'); ?></h2>
+                        <ul><?php the_field('front_page_check_list'); ?></ul>
+                    </div> 
+             </div>
+
     </div>
 </section>
 
+
 <section class="frontpage-container-4">
-    <div class="frontpage-container-box4">
+<div class="frontpage-container-box4">
+    <?php while ( have_rows('boucle') ) : the_row(); ?>  
         <div class="frontpage-container-box4-items">
-            <img class="img" src="<?php bloginfo('template_url'); ?>/assets/images/breakdown_anticipation.svg" alt="logo">
-            <p>Breakdown anticipation</p>
-            <h1>48h</h1>
+        <?php if( get_sub_field('logo') ): ?>
+            <img src="<?php the_sub_field('logo'); ?>" />
+        <?php endif; ?>
+            <p><?php the_sub_field('title'); ?></p>
+            <h1><?php the_sub_field('number'); ?></h1>
         </div>
-        <div class="frontpage-container-box4-items">
-            <img class="img sec" src="<?php bloginfo('template_url'); ?>/assets/images/records_data.svg" alt="logo">
-            <p>Records of data collected</p>
-            <h1>450 M</h1>
-        </div>
-        <div class="frontpage-container-box4-items">
-            <img class="img" src="<?php bloginfo('template_url'); ?>/assets/images/countries_europe.svg" alt="logo">
-            <p>Countries in Europe</p>
-            <h1>3</h1>
-        </div>
+        <?php endwhile; ?>
     </div>
 
 </section>
