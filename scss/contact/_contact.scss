@@ -9,7 +9,8 @@
         background-color: $light-green;
         border-radius:  0 0 120px 0;
         width: 100%;
-        padding-top: 166px;
+        padding-top: 130px;
+        padding-bottom: 50px;
         @include responsive(tablet){
             width: 55%;
             padding-top: 0px;

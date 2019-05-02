@@ -12,12 +12,13 @@ width: 100vw;
         .container_faq_box1_title{
             width: 80%;
             margin: auto;
-            padding-top: 250px;
+            padding-top: 150px;
             padding-bottom: 80px;
            @include responsive(tablet){
             width: 30%;
             padding-left: 150px;
             margin: 0;
+            padding-top: 250px;
             }
            h1{
                 color: $white;
@@ -26,6 +27,7 @@ width: 100vw;
                 line-height: 100px;
                 font-weight: bolder;
                 margin: 0;
+                text-transform: uppercase;
            }
            p{
                 color: $white;
@@ -55,10 +57,13 @@ width: 100vw;
           }
         .faq-question{
                 font-family: $font-menu;
-                font-size: 30px;
+                font-size: 20px;
                 font-weight: bold;
                 line-height: 40px;
                 margin: 55px 0;
+                @include responsive(tablet){
+                  font-size: 30px;
+                  }
         }
         .faq-answer{
             display: none;
@@ -79,7 +84,7 @@ width: 100vw;
         .active-fq {
             .faq-question{
                 color:$light-green;
-                font-size: 36px;
+                font-size: 26px;
                 font-weight: 900;
                 @include responsive(tablet){
                   font-size: 46px;

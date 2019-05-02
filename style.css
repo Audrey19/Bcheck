@@ -261,7 +261,7 @@ body {
     .frontpage-container-1 .frontpage-container-box .frontpage-container-box-mission {
       width: 80%;
       margin: auto;
-      margin-top: 200px; }
+      margin-top: 100px; }
       @media only screen and (min-width: 768px) {
         .frontpage-container-1 .frontpage-container-box .frontpage-container-box-mission {
           width: 40%;
@@ -511,7 +511,7 @@ body {
 /* about us */
 .container_about_one {
   width: 100vw;
-  padding-top: 166px;
+  padding-top: 100px;
   position: relative; }
   @media only screen and (min-width: 768px) {
     .container_about_one {
@@ -531,7 +531,7 @@ body {
       font-size: 35px;
       font-weight: 900;
       text-transform: uppercase;
-      text-align: center; }
+      text-align: left; }
       @media only screen and (min-width: 768px) {
         .container_about_one .about_text h1 {
           font-size: 45px;
@@ -557,7 +557,11 @@ body {
     .container_about_one .about_logo img {
       width: 25px;
       display: block;
-      padding: 27px; }
+      margin: auto;
+      padding-top: 27px; }
+      @media only screen and (min-width: 768px) {
+        .container_about_one .about_logo img {
+          padding: 27px 0; } }
   .container_about_one .about_img {
     margin: 0;
     padding-bottom: 50px; }
@@ -655,7 +659,8 @@ body {
     background-color: #75B845;
     border-radius: 0 0 120px 0;
     width: 100%;
-    padding-top: 166px; }
+    padding-top: 130px;
+    padding-bottom: 50px; }
     @media only screen and (min-width: 768px) {
       .container_contact .container_contact_box_left {
         width: 55%;
@@ -812,20 +817,22 @@ body {
     .container_faq .container_faq_box1 .container_faq_box1_title {
       width: 80%;
       margin: auto;
-      padding-top: 250px;
+      padding-top: 150px;
       padding-bottom: 80px; }
       @media only screen and (min-width: 768px) {
         .container_faq .container_faq_box1 .container_faq_box1_title {
           width: 30%;
           padding-left: 150px;
-          margin: 0; } }
+          margin: 0;
+          padding-top: 250px; } }
       .container_faq .container_faq_box1 .container_faq_box1_title h1 {
         color: #FFFFFF;
         font-size: 60px;
         letter-spacing: 3px;
         line-height: 100px;
         font-weight: bolder;
-        margin: 0; }
+        margin: 0;
+        text-transform: uppercase; }
       .container_faq .container_faq_box1 .container_faq_box1_title p {
         color: #FFFFFF;
         font-size: 18px;
@@ -855,10 +862,13 @@ body {
       z-index: 5; }
     .container_faq .container_faq_box2 .faq-question {
       font-family: "Lato", sans-serif;
-      font-size: 30px;
+      font-size: 20px;
       font-weight: bold;
       line-height: 40px;
       margin: 55px 0; }
+      @media only screen and (min-width: 768px) {
+        .container_faq .container_faq_box2 .faq-question {
+          font-size: 30px; } }
     .container_faq .container_faq_box2 .faq-answer {
       display: none;
       padding: 1em 2em; }
@@ -874,7 +884,7 @@ body {
             width: 700px; } }
     .container_faq .container_faq_box2 .active-fq .faq-question {
       color: #75B845;
-      font-size: 36px;
+      font-size: 26px;
       font-weight: 900; }
       @media only screen and (min-width: 768px) {
         .container_faq .container_faq_box2 .active-fq .faq-question {
@@ -1001,16 +1011,16 @@ header {
     padding: 130px 0;
     display: block;
     position: fixed;
-    top: 0;
-    background-color: #1E1E1E;
-    list-style: none; }
+    top: -80px;
+    background-color: #1E1E1E; }
     header .menu-menu-responsive-container.is-active ul {
       padding: 0; }
     header .menu-menu-responsive-container.is-active li {
       border-bottom: 1px solid #FFFFFF;
       margin: 60px auto;
       padding-bottom: 30px;
-      width: 70%; }
+      width: 70%;
+      list-style-type: none; }
     header .menu-menu-responsive-container.is-active a {
       text-decoration: none;
       color: #FFFFFF;
@@ -2138,7 +2148,7 @@ header {
     flex-direction: column; }
     @media only screen and (min-width: 768px) {
       .footer_container .pagination_container {
-        width: 950px;
+        width: 80%;
         position: absolute;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -2162,7 +2172,7 @@ header {
       text-align: right; }
       @media only screen and (min-width: 768px) {
         .footer_container .pagination_container .pagination_faq {
-          width: 457px;
+          width: 40%;
           margin: 10px;
           margin-right: 30px; } }
       .footer_container .pagination_container .pagination_faq:before {
@@ -2187,7 +2197,7 @@ header {
       text-align: left; }
       @media only screen and (min-width: 768px) {
         .footer_container .pagination_container .pagination_contact {
-          width: 457px;
+          width: 40%;
           margin: 10px;
           margin-left: 30px; } }
       .footer_container .pagination_container .pagination_contact:after {
